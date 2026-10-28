@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>小売業向け 法人AI研修｜AIを「使う」から、業務を「つなぐ」へ。</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--bg2:#f2f6fb;--card:#fff;--ink:#0f1f3d;--sub:#4a5b78;--line:#d9e2ef;--navy:#0f2a5c;--blue:#1d5fd1;--soft:#e6efff;--acc:#f08a24;--accsoft:#fff1e0;--onnavy:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1426;--bg2:#101c34;--card:#14233f;--ink:#eaf0fb;--sub:#a9b7d0;--line:#26385c;--navy:#0a1a3a;--blue:#6ea2ff;--soft:#1a2f57;--acc:#ffa04a;--accsoft:#3a2a15}}
+:root[data-theme="dark"]{--bg:#0b1426;--bg2:#101c34;--card:#14233f;--ink:#eaf0fb;--sub:#a9b7d0;--line:#26385c;--navy:#0a1a3a;--blue:#6ea2ff;--soft:#1a2f57;--acc:#ffa04a;--accsoft:#3a2a15}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;line-height:1.75;font-size:16px}
+.w{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:104px 0}.alt{background:var(--bg2)}
+h1,h2,h3{line-height:1.4;margin:0}
+h2{font-size:clamp(24px,4vw,34px);font-weight:900;color:var(--navy);text-align:center;letter-spacing:.01em}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) h2{color:var(--ink)}}
+:root[data-theme="dark"] h2{color:var(--ink)}
+.lead{text-align:center;color:var(--sub);margin:14px auto 56px;max-width:680px}
+.grid{display:grid;gap:20px}.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px}
+.tag{display:inline-block;font-size:13px;font-weight:700;color:var(--blue);background:var(--soft);padding:2px 12px;border-radius:99px}
+.ic{width:60px;height:60px;border-radius:16px;background:var(--soft);display:grid;place-items:center;margin-bottom:12px}
+.ic svg{width:30px;height:30px;stroke:var(--blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.note{font-size:13px;color:var(--sub)}
+/* hero */
+.hero{background:var(--navy);color:var(--onnavy);padding:56px 0 64px;position:relative;overflow:hidden}
+.hero .w{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.hero .kick{font-weight:700;color:#9cc0ff;font-size:15px;margin-bottom:14px}
+.hero h1{font-size:clamp(30px,5.2vw,50px);font-weight:900;letter-spacing:.01em}
+.hero h1 b{color:#ffb36b;font-weight:900}
+.hero p.s{color:#cfdcf5;margin:18px 0 22px;max-width:520px}
+.vals{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.val{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:8px 12px;font-size:14px;font-weight:700}
+.val svg{width:20px;height:20px;stroke:#ffb36b;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.rec{display:inline-flex;gap:8px;align-items:center;font-weight:700;border-left:4px solid #ffb36b;padding-left:12px}
+.hero svg.fl{width:100%;height:auto}
+/* s2 */
+.pair{display:grid;gap:8px;margin-top:14px}
+.ai{background:var(--soft);border-radius:10px;padding:10px 12px;font-size:15px}
+.hand{background:var(--accsoft);border-radius:10px;padding:10px 12px;font-size:15px;font-weight:500}
+.ai small,.hand small{display:block;font-size:12px;font-weight:700;color:var(--sub)}
+.msg{margin:36px auto 0;text-align:center;font-size:clamp(18px,2.6vw,24px);font-weight:900;color:var(--navy);max-width:720px}
+:root[data-theme="dark"] .msg{color:var(--ink)}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .msg{color:var(--ink)}}
+/* s3 */
+.case{margin-bottom:28px;scroll-margin-top:20px}
+.case>h3{font-size:19px;color:var(--navy);margin-bottom:12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+:root[data-theme="dark"] .case>h3{color:var(--ink)}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .case>h3{color:var(--ink)}}
+.flow{display:grid;grid-template-columns:1fr 36px 1.25fr 36px 1fr;align-items:stretch}
+.st{border-radius:16px;padding:26px;border:1px solid var(--line);background:var(--card)}
+.st.m{background:var(--navy);color:#fff;border-color:var(--navy)}
+.st.m h4{color:#ffb36b}
+.st.r{border-color:var(--acc);background:var(--accsoft)}
+.st h4{margin:0 0 6px;font-size:13px;font-weight:700;color:var(--sub)}
+.st p{margin:0;font-size:15px}.st.r p{color:var(--ink)}
+.ar{display:grid;place-items:center}.ar svg{width:28px;height:28px;stroke:var(--blue);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.st h4{display:flex;align-items:center;gap:8px}.st h4::before{content:"";width:22px;height:22px;flex:none;background:center/contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234a5b78' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 3h9l4 4v14H6zM9 12h7M9 16h7'/%3E%3C/svg%3E")}
+.st.m h4::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffb36b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18'/%3E%3C/svg%3E")}
+.st.r h4::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f08a24' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E")}
+.st p{font-size:16px;font-weight:500}
+/* s4 */
+.vis{background:var(--bg2);border:1px dashed var(--line);border-radius:10px;padding:10px;margin-bottom:14px;position:relative}
+.vis svg{width:100%;height:auto;display:block}
+.vis em{position:absolute;right:8px;top:6px;font-size:11px;font-style:normal;font-weight:700;color:var(--sub);background:var(--card);border-radius:6px;padding:0 6px}
+blockquote{margin:12px 0;padding:10px 14px;border-left:4px solid var(--blue);background:var(--soft);border-radius:0 10px 10px 0;font-size:15px}
+blockquote small{display:block;color:var(--sub);font-size:12px;margin-top:2px}
+/* s5 */
+.sc{text-align:center}
+.sc .n{font-size:44px;font-weight:900;color:var(--blue);line-height:1.1}
+.sc .n span{font-size:18px;color:var(--sub);font-weight:500}
+.sc .l{font-size:14px;color:var(--sub);margin-bottom:12px}
+.sc .t{font-size:18px;font-weight:900;margin-bottom:10px}
+.cnt{margin-top:8px;font-size:14px;font-weight:700;border-top:1px solid var(--line);padding-top:10px}
+/* s6 */
+.lv{display:flex;flex-direction:column;border-top:6px solid var(--blue)}
+.lv.l2{border-color:var(--navy)}.lv.l3{border-color:var(--acc)}
+.lv .bar{display:flex;gap:4px;margin:8px 0 14px}.lv .bar i{height:6px;flex:1;border-radius:3px;background:var(--line)}.lv .bar i.on{background:var(--blue)}
+.lv h3{font-size:20px;font-weight:900}.lv .hd{font-weight:700;color:var(--sub);font-size:15px;margin-top:4px}
+.lv ul{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:22px}
+.lv li{padding-left:14px;border-left:3px solid var(--soft)}.lv li b{display:block;font-size:15px}.lv li span{font-size:13px;color:var(--sub);line-height:1.6;display:block}
+.lv .foc{margin-top:auto;padding-top:16px;font-size:13px;font-weight:700;color:var(--blue)}
+/* cta */
+.cta{background:var(--navy);color:#fff;text-align:center}
+.cta h2{color:#fff}.cta p{color:#cfdcf5;max-width:640px;margin:16px auto}
+.reply{max-width:680px;margin:28px auto 0;background:#fff;color:#0f1f3d;border-radius:16px;padding:26px;display:flex;gap:16px;align-items:center;text-align:left;scroll-margin-top:24px}
+.reply .mi{flex:none;width:56px;height:56px;border-radius:14px;background:#e6efff;display:grid;place-items:center}
+.reply .mi svg{width:30px;height:30px;stroke:#1d5fd1;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.reply b{font-size:17px;line-height:1.6}
+.btn{display:inline-block;margin-top:22px;background:var(--acc);color:#1a1205;font-weight:900;padding:14px 28px;border-radius:12px;text-decoration:none;font-size:16px}
+.btn:hover{filter:brightness(1.08)}.btn:focus-visible,a:focus-visible{outline:3px solid #9cc0ff;outline-offset:3px}
+.chip{display:inline-block;margin:4px 4px 0 0;font-size:13px;font-weight:700;color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:4px 12px;border-radius:99px;text-decoration:none}
+footer{padding:22px 0;text-align:center;font-size:13px;color:var(--sub)}
+@media (max-width:860px){.hero .w{grid-template-columns:1fr}.g3{grid-template-columns:1fr}
+.flow{grid-template-columns:1fr}.ar{height:30px}.ar svg{transform:rotate(90deg)}section{padding:72px 0}.reply{flex-direction:column;text-align:center}}
+@media (prefers-reduced-motion:no-preference){.pulse{animation:p 2.4s ease-in-out infinite}@keyframes p{50%{opacity:.45}}}
+</style>
+</head>
+<body>
+<!-- 数値・受講者の声の公開は、掲載許可の確認後に行うこと -->
+<header class="hero">
+<div class="w">
+<div>
+<div class="kick">株式会社UX-HATCH ｜ 小売業向け 法人AI研修</div>
+<h1>AIを「使う」から、<br>業務を<b>「つなぐ」</b>へ。</h1>
+<p class="s">日々のデータ活用から、業務の仕組み化、アプリの試作まで。小売業の業務改善を次の段階へ。</p>
+<div class="vals">
+<div class="val"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></svg>定型業務の効率化</div>
+<div class="val"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="6" r="2"/><circle cx="19" cy="12" r="2"/><circle cx="12" cy="18" r="2"/><path d="M7 11l3-4M14 7l3 4M17 13l-3 4M10 17l-3-4"/></svg>複数工程の仕組み化</div>
+<div class="val"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h3M8 17h6"/></svg>業務アプリの試作</div>
+</div>
+<div class="rec"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffb36b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>小売業での研修実績あり</div>
+</div>
+<div aria-label="データが整理され、判断・文章・アプリへつながるイメージ図">
+<svg class="fl" viewBox="0 0 440 330" role="img" aria-label="イメージ図：売上・在庫・問い合わせの情報が整理され、報告・商品説明文・業務アプリへつながる流れ">
+<g font-family="Noto Sans JP,sans-serif" font-size="14" font-weight="700" text-anchor="middle">
+<rect x="170" y="10" width="100" height="310" rx="50" fill="#1d5fd1" opacity=".35"/>
+<rect x="182" y="22" width="76" height="286" rx="38" fill="#1d5fd1"/>
+<text x="220" y="156" fill="#fff">AIで</text><text x="220" y="176" fill="#fff">整理・判断</text>
+<g stroke="#9cc0ff" stroke-width="2" stroke-linecap="round"><path d="M124 55H166M124 165H166M124 275H166M274 55H306M274 165H306M274 275H306"/></g>
+<g fill="#9cc0ff"><path d="M308 55l-7-5v10zM308 165l-7-5v10zM308 275l-7-5v10z"/></g>
+<rect x="0" y="33" width="120" height="44" rx="22" fill="#fff"/><text x="60" y="60" fill="#0f2a5c">売上データ</text>
+<rect x="0" y="143" width="120" height="44" rx="22" fill="#fff"/><text x="60" y="170" fill="#0f2a5c">在庫・商品情報</text>
+<rect x="0" y="253" width="120" height="44" rx="22" fill="#fff"/><text x="60" y="280" fill="#0f2a5c">問い合わせ</text>
+<rect x="320" y="33" width="120" height="44" rx="22" fill="#ffb36b"/><text x="380" y="60" fill="#1a1205">週次報告</text>
+<rect x="320" y="143" width="120" height="44" rx="22" fill="#ffb36b"/><text x="380" y="170" fill="#1a1205">商品説明文</text>
+<rect x="320" y="253" width="120" height="44" rx="22" fill="#ffb36b"/><text x="380" y="280" fill="#1a1205">業務アプリ</text>
+</g></svg>
+<div class="note" style="color:#9fb4d8;text-align:center">※ 仕組みを説明するイメージ図です</div>
+</div>
+</div>
+</header>
+
+<section>
+<div class="w">
+<h2>AIを使う業務は増えた。<br>その先の作業はどうでしょうか？</h2>
+<p class="lead">想定される業務の一例です。</p>
+<div class="grid g3">
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><span class="tag">売上・在庫管理</span>
+<div class="pair"><div class="ai"><small>AIでできる</small>分析</div><div class="hand"><small>手作業のまま？</small>データの収集・転記・集計</div></div></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M20 12l-8 8-9-9V3h8l9 9zM7.5 7.5h.01"/></svg></div><span class="tag">商品情報管理</span>
+<div class="pair"><div class="ai"><small>AIでできる</small>文章づくり</div><div class="hand"><small>そろっていない？</small>商品ごとの情報整理・作成ルール</div></div></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><span class="tag">問い合わせ対応</span>
+<div class="pair"><div class="ai"><small>AIでできる</small>返信案の作成</div><div class="hand"><small>別作業になっている？</small>対応情報の確認・履歴管理</div></div></div>
+</div>
+<p class="msg">一つひとつの作業だけでなく、<br>業務の流れ全体を考えるAI活用へ。</p>
+</div>
+</section>
+
+<section class="alt" id="skills">
+<div class="w">
+<h2>研修で学んだスキルを、<br>業務にどう活かす？</h2>
+<p class="lead">自社の業務に近いものからご覧ください。</p>
+
+<div class="case" id="case-a">
+<h3><span class="tag">01</span>売上・在庫データの集計と報告</h3>
+<div class="flow">
+<div class="st"><h4>現在の作業</h4><p>確認・転記・集計・報告</p></div>
+<div class="ar"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+<div class="st m"><h4>研修で学ぶこと</h4><p>データ抽出・整理<br>繰り返し使えるAI処理の設計<br>複数工程の組み合わせ</p></div>
+<div class="ar"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+<div class="st r"><h4>活用イメージ</h4><p>週次報告・売上分析を、再利用できる仕組みへ</p></div>
+</div></div>
+
+<div class="case" id="case-b">
+<h3><span class="tag">02</span>商品情報の整理と作成</h3>
+<div class="flow">
+<div class="st"><h4>現在の作業</h4><p>情報確認 → 説明文・掲載情報づくり</p></div>
+<div class="ar"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+<div class="st m"><h4>研修で学ぶこと</h4><p>商品情報と業務ルールをAIへ与え、一定の形式で出力する「型」づくり</p></div>
+<div class="ar"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+<div class="st r"><h4>活用イメージ</h4><p>説明文・EC掲載情報を共通の手順で作成</p></div>
+</div></div>
+
+<div class="case" id="case-c">
+<h3><span class="tag">03</span>問い合わせ情報・業務情報の管理</h3>
+<div class="flow">
+<div class="st"><h4>現在の作業</h4><p>確認・記録・更新が別々</p></div>
+<div class="ar"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+<div class="st m"><h4>研修で学ぶこと</h4><p>登録・編集・検索ができる小規模な業務アプリを、AIの支援で試作</p></div>
+<div class="ar"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+<div class="st r"><h4>活用イメージ</h4><p>問い合わせ履歴・タスク・部署別の情報管理など</p></div>
+</div></div>
+<p class="note" style="text-align:center">※ 活用イメージは想定例であり、改善成果を示すものではありません。</p>
+</div>
+</section>
+
+<section>
+<div class="w">
+<h2>研修では、こんなスキルの<br>習得に取り組んでいます。</h2>
+<p class="lead">A社の受講者アンケートで確認できた内容です。</p>
+<div class="grid g3">
+<div class="card"><div class="vis"><em>イメージ図</em><svg viewBox="0 0 240 90"><g fill="none" stroke="#1d5fd1" stroke-width="2"><rect x="10" y="25" width="50" height="40" rx="6"/><rect x="95" y="25" width="50" height="40" rx="6"/><rect x="180" y="25" width="50" height="40" rx="6"/><path d="M60 45h35M145 45h35"/></g><g font-size="10" fill="#4a5b78" text-anchor="middle" font-family="sans-serif"><text x="35" y="49">データ</text><text x="120" y="49">AI処理</text><text x="205" y="49">報告</text></g></svg></div>
+<span class="tag">作成した</span><h3 style="font-size:18px;margin:8px 0">週次報告用のAI処理を作成</h3>
+<blockquote>「週次報告や広告の商品選定のSKILLが出来た」<small>受講者回答</small></blockquote>
+<p class="note" style="font-size:14px;margin:0">毎週の作業を、再利用できる処理に。</p></div>
+<div class="card"><div class="vis"><em>イメージ図</em><svg viewBox="0 0 240 90"><g fill="none" stroke="#1d5fd1" stroke-width="2"><rect x="10" y="30" width="60" height="30" rx="15" fill="#e6efff"/><rect x="105" y="15" width="50" height="60" rx="6"/><path d="M70 45h35M130 30h14M130 45h14M130 60h14"/><rect x="175" y="25" width="55" height="40" rx="6"/></g><g font-size="10" fill="#4a5b78" text-anchor="middle" font-family="sans-serif"><text x="40" y="49">ボタン</text><text x="202" y="49">抽出</text></g></svg></div>
+<span class="tag">作成・実践した</span><h3 style="font-size:18px;margin:8px 0">ボタン操作によるデータ抽出</h3>
+<blockquote>「チームで作成したGASのコードが出来上がり、ボタン一つでデータ抽出することができました。」<small>受講者回答</small></blockquote>
+<p class="note" style="font-size:14px;margin:0">研修中にコードを作成し、実践。</p></div>
+<div class="card"><div class="vis"><em>イメージ図</em><svg viewBox="0 0 240 90"><g fill="none" stroke="#1d5fd1" stroke-width="2"><rect x="20" y="10" width="200" height="70" rx="8"/><path d="M40 30h12M64 30h120M40 46h12M64 46h90M40 62h12M64 62h110"/></g></svg></div>
+<span class="tag">作成した</span><h3 style="font-size:18px;margin:8px 0">タスク管理アプリを作成</h3>
+<blockquote style="font-size:14px">受講者アンケートで、研修中にタスク管理アプリを作成したとの回答がありました。</blockquote>
+<p class="note" style="font-size:14px;margin:0">AIを活用した小規模な業務アプリ。</p></div>
+</div>
+<p class="note" style="text-align:center;margin-top:18px">※ 図は仕組みを説明するイメージ図で、実際の成果物ではありません。</p>
+</div>
+</section>
+
+<section class="alt" id="voice">
+<style>.vgrid{display:grid;gap:24px;grid-template-columns:repeat(2,1fr)}.vc h3{font-size:18px;margin:0 0 20px;line-height:1.5;color:var(--ink)}.vb,.va{border-radius:14px;padding:18px 20px;font-size:15px}.vb{background:var(--bg2);border:1px dashed var(--line)}.va{background:var(--soft);border:1px solid var(--blue)}.lab{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:900;letter-spacing:.08em;margin-bottom:6px;color:var(--sub)}.va .lab{color:var(--blue)}.vdn{height:32px;background:center/22px no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231d5fd1' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 4v16M6 14l6 6 6-6'/%3E%3C/svg%3E")}.nx{margin-top:14px;display:flex;gap:10px;align-items:baseline;background:var(--accsoft);border-radius:10px;padding:10px 14px;font-size:14px;font-weight:500}.nx b{flex:none;font-size:12px;font-weight:900;color:var(--ink);background:var(--card);border-radius:99px;padding:0 10px}@media(max-width:860px){.vgrid{grid-template-columns:1fr}}
+.vb,.va{position:relative;margin-left:60px;border-radius:4px 20px 20px 20px;padding:16px 20px}.vb{border:1px solid var(--line);background:var(--bg2)}.va{border:1px solid var(--blue);background:var(--soft);font-weight:500}
+.vb::before,.va::before{content:"";position:absolute;left:-60px;top:0;width:44px;height:44px;border-radius:50%;background:center/contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23d3dbe8'/%3E%3Ccircle cx='20' cy='16' r='6.5' fill='%238292ab'/%3E%3Cpath d='M7.5 35c0-7.5 5.5-11.5 12.5-11.5S32.5 27.5 32.5 35A20 20 0 0 1 7.5 35z' fill='%238292ab'/%3E%3C/svg%3E")}
+.va::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%231d5fd1'/%3E%3Ccircle cx='20' cy='16' r='6.5' fill='%23fff'/%3E%3Cpath d='M7.5 35c0-7.5 5.5-11.5 12.5-11.5S32.5 27.5 32.5 35A20 20 0 0 1 7.5 35z' fill='%23fff'/%3E%3C/svg%3E")}
+.vb .lab,.va .lab{font-size:0;letter-spacing:0}.vb .lab::after{content:"研修前"}.va .lab::after{content:"研修後"}.vb .lab::after,.va .lab::after{font-size:12px;font-weight:700}
+.vdn{height:14px;background:none}.nx{margin-left:60px}</style>
+<div class="w">
+<h2>受講者は、研修を通じて<br>何ができるようになったのか？</h2>
+<p class="lead">AIの活用方法を考えるところから、実際に業務に使える仕組みの作成まで。<br>受講者アンケートから、研修での変化をご紹介します。</p>
+<div class="vgrid">
+<div class="card vc"><h3>AIの使い道が分からない状態から、業務に使う仕組みを作成</h3>
+<div class="vb"><span class="lab">BEFORE</span>以前は、AIをどのように活用すればよいか分からなかった。</div><div class="vdn"></div>
+<div class="va"><span class="lab">AFTER</span>週次報告や広告の商品選定に使うAI処理を作成できた！</div>
+<div class="nx"><b>今後</b>月次報告にも応用したいと回答。</div></div>
+<div class="card vc"><h3>漠然としたAI活用のイメージから、改善する業務を明確化</h3>
+<div class="vb"><span class="lab">BEFORE</span>「AIが使えたら便利そう」という漠然としたイメージ。</div><div class="vdn"></div>
+<div class="va"><span class="lab">AFTER</span>どの業務をAIで効率化するかを具体化し、繰り返し使えるAI処理を作成できた！</div>
+<div class="nx"><b>変化</b>業務改善に向けて何に取り組めばよいかが見えるように。</div></div>
+<div class="card vc"><h3>自分では難しいと思っていた作業を、AIの仕組みに</h3>
+<div class="vb"><span class="lab">BEFORE</span>自分には難しいと感じていた。</div><div class="vdn"></div>
+<div class="va"><span class="lab">AFTER</span>研修で実際に手を動かし、毎朝行うデータ更新業務の一部をAI処理として作成できた！</div>
+<div class="nx"><b>変化</b>一つ作れたことで、ほかの業務への活用アイデアも広がったと回答。</div></div>
+<div class="card vc"><h3>アプリ開発への不安から、実際に動くアプリの作成へ</h3>
+<div class="vb"><span class="lab">BEFORE</span>アプリ開発を難しいと感じていた。</div><div class="vdn"></div>
+<div class="va"><span class="lab">AFTER</span>講師のサポートを受けながら、タスク管理アプリを作成できた！</div>
+<div class="nx"><b>今後</b>業務で利用できるよう、さらに改善していきたいと回答。</div></div>
+</div>
+<p class="note" style="text-align:center;margin-top:28px">※ 受講者アンケートの回答をもとに、口語調に要約して掲載しています。業務での成果を示すものではありません。</p>
+</div>
+</section>
+<section>
+<div class="w">
+<h2>受講者アンケートによる評価</h2>
+<p class="lead">5段階評価の平均値</p>
+<div class="grid" style="grid-template-columns:repeat(2,1fr)" id="scores">
+<div class="card sc"><div class="t">基礎編</div>
+<div class="l">総合満足度</div><div class="n">4.10<span> / 5</span></div>
+<div class="l" style="margin-top:14px">できることが増えた実感</div><div class="n">4.00<span> / 5</span></div>
+<div class="cnt">最終アンケート回答 21件</div></div>
+<div class="card sc"><div class="t">実務編</div>
+<div class="l">総合満足度</div><div class="n">4.06<span> / 5</span></div>
+<div class="l" style="margin-top:14px">できることが増えた実感</div><div class="n">3.78<span> / 5</span></div>
+<div class="cnt">最終アンケート回答 18件</div></div>
+</div>
+<p class="note" style="text-align:center;margin-top:24px">※ 受講者の自己評価であり、業務削減率や導入成果を示すものではありません。</p>
+<style>@media(max-width:640px){#scores{grid-template-columns:1fr!important}}</style>
+</div>
+</section>
+
+<section class="alt">
+<div class="w">
+<h2>3段階のAI研修</h2>
+<p class="lead">業務への組み込みの深さで、3段階。</p>
+<div class="grid g3">
+<div class="card lv"><span class="tag" style="align-self:flex-start">初級</span><div class="bar"><i class="on"></i><i></i><i></i></div>
+<h3>AIを日常業務に組み込み、効率化する</h3><div class="hd">日常業務の効率化と基礎的な連携</div>
+<ul><li><b>日常業務のAI活用</b><span>文章作成・データ整理・表計算・スケジュール管理などの効率化</span></li>
+<li><b>業務専用AIの作成</b><span>マニュアルや業務ルールを参照するAIの構築と共有</span></li>
+<li><b>業務情報の自動連携</b><span>ノーコードを活用した情報の収集・共有フローの構築</span></li>
+<li><b>データ集計の自動化</b><span>売上・在庫・受注データの集約・更新、処理の改善</span></li></ul></div>
+<div class="card lv l2"><span class="tag" style="align-self:flex-start">中級</span><div class="bar"><i class="on"></i><i class="on"></i><i></i></div>
+<h3>AIを組み合わせ、業務の流れを仕組み化する</h3><div class="hd">複数工程の標準化・自動化</div>
+<ul><li><b>業務の棚卸しと改善点の発見</b><span>定型業務の洗い出しとAIを活用する工程の見極め</span></li>
+<li><b>AI処理の標準化</b><span>商品説明文や販促文などを一定のルールで作成する仕組みづくり</span></li>
+<li><b>データ分析・判断の効率化</b><span>売上・在庫データを使った分析や発注判断のたたき台作成</span></li>
+<li><b>複数工程の自動化</b><span>分析・判断・文章作成などをつなぐ業務フローの構築と改善</span></li></ul></div>
+<div class="card lv l3"><span class="tag" style="align-self:flex-start">上級</span><div class="bar"><i class="on"></i><i class="on"></i><i class="on"></i></div>
+<h3>AIで業務アプリをつくり、安全に運用する</h3><div class="hd">業務アプリの試作と安全な運用設計</div>
+<ul><li><b>業務アプリの設計</b><span>業務の流れや必要な機能、利用者・アクセス範囲の整理</span></li>
+<li><b>AIを活用したアプリ開発</b><span>データの登録・編集・検索ができる小規模アプリの試作</span></li>
+<li><b>セキュリティ・権限管理</b><span>情報の安全な取り扱いや、閲覧・編集権限の設計</span></li>
+<li><b>アプリの保守・運用</b><span>管理台帳・改修手順・運用ルールの整備</span></li></ul></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="w">
+<h2>企業の業務や習熟度に合わせた<br>研修をご提案</h2>
+<div class="grid g3" style="margin-top:32px">
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg></div><h3 style="font-size:18px">業務に合わせた研修内容</h3><p class="note" style="font-size:15px;margin:8px 0 0">業務や課題に応じて、学習内容や演習テーマを調整できます。</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 20h4v-6H3zM10 20h4V10h-4zM17 20h4V4h-4z"/></svg></div><h3 style="font-size:18px">習熟度に合わせた学習</h3><p class="note" style="font-size:15px;margin:8px 0 0">生成AIの基本的な活用から、業務の仕組み化、アプリの試作まで、目的に合わせて検討できます。</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 17l6-6-6-6M12 19h8"/></svg></div><h3 style="font-size:18px">演習を通じた実践的な学習</h3><p class="note" style="font-size:15px;margin:8px 0 0">サンプルデータや研修用環境を使い、実際に操作・試作しながら学びます。</p></div>
+</div>
+<p class="note" style="text-align:center;margin-top:22px">実際の業務システムとの連携や自動化の実現範囲は、システムの仕様・利用環境・権限などによって異なります。</p>
+</div>
+</section>
+
+<section class="cta" id="reply">
+<div class="w">
+<h2>自社の業務なら、<br>どこからAIを活用できるだろう？</h2>
+<p>研修では、企業の業務や受講者の習熟度に応じて、学習内容をご提案しています。具体的な研修内容や実施方法にご関心があれば、ぜひご相談ください。</p>
+<div class="reply">
+<div class="mi"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+<b>研修について詳しい話を聞いてみたい場合は、お送りしたご案内メールへその旨ご返信ください。</b>
+</div>
+<p style="margin-bottom:0">メールをご確認いただけない場合は、問い合わせフォームもご利用いただけます。</p>
+<a class="btn" href="https://business.form-mailer.jp/fms/1636c50f256052" target="_blank" rel="noopener">研修について問い合わせる（フォームが開きます）</a>
+</div>
+</section>
+<footer><div class="w">© 株式会社UX-HATCH</div></footer>
+</body>
+</html>
